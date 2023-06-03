@@ -85,4 +85,4 @@ production:
   <<: *default
   database: budgetappdb
   username: budgetuser
-  password: <%= ENV["BUDGET_APP_DATABASE_PASSWORD"] %>
+  password: 9ekDRmtJ3V1RfqywRsyfKciKYNwzf0J9
