@@ -126,7 +126,7 @@ rspec spec
 
 ### Deployment
 
-This project is not deployed
+Deployment link - [Live-demo](https://rails-budget-app-prxn.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
