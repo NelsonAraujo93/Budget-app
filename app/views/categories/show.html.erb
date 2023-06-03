@@ -1,0 +1,35 @@
+<section class="wrapper category">
+  <div class="back-btn">
+    <%= link_to users_path do %>
+      <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+    <% end %>
+  </div>
+  <div class="header-container">
+    <img class="cat-img" src='<%= @category.icon %>'/>
+    <%= @category.name %>
+  </div>
+  <div class="total-amount">
+    <div class="gray-font">
+      Total amount:
+    </div>
+    <div class="black-font">
+      $ <%= @total %>
+    </div>
+  </div>
+  <ul class="category-menu">
+    <% @proceedings.each do |proceeding| %>
+      <li class="category-item">
+        <div class="category-details">
+          <h3><%= proceeding.name %></h3>
+          <h5><%= Time.parse(proceeding.created_at.to_s).strftime('%d %B %Y') %></h5>
+        </div>
+        <div class="amount-details">
+          <h4>$ <%= proceeding.amount %></h4>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <div class="main-btn-container">
+    <%= button_to "Add Transaction", new_category_proceeding_path(@category.id), method:'get', class: "main-btn" %>
+  </div>
+</section>
