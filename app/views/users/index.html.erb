@@ -1,1 +1,26 @@
-<h1><%= @user.name %></h1>
+<section class="wrapper home">
+  <div class="header-container"> TRANSACTIONS </div>
+  <ul class="category-menu">
+    <% @categories.each do |category| %>
+      <li class="category-item">
+        <%= link_to category_path(category.id) do %>
+        <% end %>
+        <img class="main-cat-img" src='<%= category.icon %>'/>
+        <div class="category-details">
+          <h3><%= category.name %></h3>
+          <h5><%= Time.parse(category.created_at.to_s).strftime('%d %B %Y') %></h5>
+        </div>
+        <div class="amount-details">
+          <% @total_amount = 0 %>
+          <% category.proceedings.each do |proceeding| %>
+            <% @total_amount += proceeding.amount.to_i %>
+          <% end %>
+          <h4>$ <%= @total_amount %></h4>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <div class="main-btn-container">
+    <%= button_to "Add Category", new_category_path, method:'get', class: "main-btn" %>
+  </div>
+</section>

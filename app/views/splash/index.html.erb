@@ -1,0 +1,14 @@
+<section class="splash-screen">
+  <div class="app-icon">
+    <img class="app-logo" src="https://vagosstudios.com/servicios_backtext.5592c228743402f39d22.png"/>
+    <h1>Bugget-App by Nelson</h1>
+  </div>
+  <div class="splash-actions">
+    <div class="login-btn">
+      <%= link_to user_session_path do %>
+        <div>LOG IN</div>
+      <% end %>
+    </div>
+    <%= link_to "SIGN UP", new_user_registration_path, class:'gray-link' %>
+  </div>
+</section>

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @user = User.includes(:categories).find(current_user.id)
+    @user = User.includes(categories: :proceedings).find(current_user.id)
+    @categories = @user.categories
   end
 end

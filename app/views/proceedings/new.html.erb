@@ -1,0 +1,19 @@
+<div class="new proceeding">
+  <div class="back-btn">
+    <%= link_to category_path(@category.id) do %>
+      <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+    <% end %>
+  </div>
+  <h2 class="main-title">Add new transaction</h2>
+  <%= form_with model: @proceeding, url: category_proceedings_path do |form| %>
+    <div class="form-item">
+      <%= form.text_field :name, class: "input-container", placeholder: "Transaction name" %>
+    </div>
+    <div class="form-item">
+      <%= form.number_field :amount, class: "input-container", placeholder: "Amount (numeric)" %>
+    </div>
+    <button class="form-btn-container">
+      <%= form.submit "Save", class: 'form-btn'%>
+    </button>
+  <% end %>
+</div>

@@ -1,0 +1,31 @@
+<section class="sign-up-container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="header-back">
+      <div class="back-btn-header">
+        <%= link_to :back do %>
+          <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+        <% end %>
+      </div>
+      <h3>REGISTER</h3>
+      <div class="form-btn-container">
+        <%= f.submit "Next", class: 'form-btn' %>
+      </div>
+    </div>
+    <div class="form-item">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Full name' %>
+    </div>
+    <div class="form-item">
+      <%= f.email_field :email, autocomplete: "email", placeholder: 'Email' %>
+    </div>
+    <% if @minimum_password_length %>
+      <em class="gray-font">(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <div class="form-item pass">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password' %>
+    </div>
+    <div class="form-item">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password confirmation' %>
+    </div>
+  <% end %>
+</section>
