@@ -24,7 +24,7 @@
 
 # 📖 Budget App <a name="about-project"></a>
 
-**Recipe App** This is a RoR project to test my skills in ERD, ORM, Ruby, RoR, SQL and GitFlow.
+**Budget App** This is a RoR project to test my skills in ERD, ORM, Ruby, RoR, SQL and GitFlow.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -80,7 +80,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/biruk-bereka/Recipe-app.git
+git clone https://github.com/NelsonAraujo93/Budget-app.git
 ```
 
 Or download the ZIP folder.
@@ -148,7 +148,7 @@ This project is not deployed
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/biruk-bereka/Recipe-app/issues).
+Feel free to check the [issues page](https://github.com/NelsonAraujo93/Budget-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
