@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="alerts-notices">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+   
+    <% if current_user %>
+      <button id="open-menu">
+        <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+      </button>
+      <div id="slide-menu">
+        <%= render 'shared/navigation' %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

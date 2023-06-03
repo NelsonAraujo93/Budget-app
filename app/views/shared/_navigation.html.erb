@@ -1,0 +1,23 @@
+<nav class="slide-menu-container">
+  <button id="close-menu">
+    <i class="fa-regular fa-circle-xmark" style="color: #ffffff;"></i>
+  </button>
+  <div class="user-name">
+    <%= current_user.name %>
+  </div>
+  <ul class="nav-menu">
+    <li
+      class="<%= current_page?(root_path) ? 'menu-item active' : 'menu-item' %>"
+    >
+      <%= link_to 'Home', root_path %>
+    </li>
+  </ul>
+  <div class="second-btn-container">
+    <%= button_to(
+          "Log Out",
+          destroy_user_session_path,
+          method: :delete,
+          class: 'main-btn'
+        ) %>
+  </div>
+</nav>
