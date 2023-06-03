@@ -12,7 +12,6 @@ class ProceedingsController < ApplicationController
     @proceeding.author_id = @user.id
     @proceeding.categories << @category
     authorize! :create, @proceeding
-    @proceeding.save!
     if @proceeding.valid?
       @proceeding.save
       flash[:notice] = 'Transaction added successfully'

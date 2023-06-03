@@ -9,7 +9,6 @@ class CategoriesController < ApplicationController
     @user = User.find(current_user.id)
     @category.author_id = @user.id
     authorize! :create, @category
-    @category.save!
     if @category.valid?
       @category.save
       flash[:notice] = 'Category added successfully'
@@ -22,7 +21,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.includes(:proceedings).find(params[:id])
+    @category = Category.includes(:proceedings).order('proceedings.created_at DESC').find(params[:id])
     @proceedings = @category.proceedings
     @total = 0
     @proceedings.each do |proceeding|

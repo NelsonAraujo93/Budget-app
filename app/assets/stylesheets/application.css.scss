@@ -33,7 +33,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ced5dc;
+  color: #93b5d6;
   animation: appear-then-fade 2s both;
 }
 
@@ -236,6 +236,7 @@ button.main-btn {
   width: 100%;
   cursor: pointer;
   height: 100%;
+  font-family: 'Proxima-nova-l';
 }
 
 h5, h4, h3, h2, h1 {
@@ -256,6 +257,7 @@ h5, h4, h3, h2, h1 {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 14px;
+  font-family: 'Proxima-nova-b';
 }
 
 .category-item a {
@@ -317,6 +319,7 @@ img.cat-img {
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
+  font-family: 'Proxima-nova-b';
 }
 
 /* Proceeding */
@@ -454,4 +457,13 @@ a.gray-link {
 em.gray-font {
   color: #989da3;
   padding-left: 10px;
+}
+
+.black-font {
+  font-family: 'Proxima-nova-b';
+}
+
+.gray-font {
+  font-family: 'Proxima-nova-l';
+  color: #989da3;
 }
