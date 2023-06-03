@@ -5,7 +5,7 @@ RSpec.describe Proceeding, type: :model do
   let(:category) do
     Category.new(author_id: user.id, icon: 'https://picsum.photos/200/300', name: 'Recipe 1')
   end
-  subject { Proceeding.new(name:'Car stuff', author_id: user.id, amount: 15, categories: []) }
+  subject { Proceeding.new(name: 'Car stuff', author_id: user.id, amount: 15, categories: []) }
   before do
     user.save
     category.save

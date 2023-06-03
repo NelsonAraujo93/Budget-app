@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root ('splash#index')
+  root('splash#index')
   resources :users, only: [:index]
-  resources :categories, only: [:new, :create, :destroy, :show] do 
-    resources :proceedings, only: [:new, :create, :destroy]
+  resources :categories, only: %i[new create destroy show] do
+    resources :proceedings, only: %i[new create destroy]
   end
 end

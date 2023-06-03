@@ -5,9 +5,9 @@ RSpec.describe Proceeding, type: :system do
   let(:category) do
     Category.new(author_id: user.id, icon: 'https://picsum.photos/200/300', name: 'Recipe 1')
   end
-  subject { Proceeding.new(name:'Car stuff', author_id: user.id, amount: 15, categories: []) }
+  subject { Proceeding.new(name: 'Car stuff', author_id: user.id, amount: 15, categories: []) }
   before do
-  ActionMailer::Base.deliveries.clear
+    ActionMailer::Base.deliveries.clear
     user.save
     category.save
     subject.categories << category
