@@ -11,15 +11,17 @@
 }
 
 h2 {
-  font-family: 'Proxima-nova-l';
+  font-family: 'Proxima-nova-l', sans-serif;
 }
 
 @keyframes appear-then-fade {
-  0%, 100% {
-    opacity:0
+  0%,
+  100% {
+    opacity: 0;
   }
-  5%, 60% {
-    opacity:1
+  5%,
+  60% {
+    opacity: 1;
   }
 }
 
@@ -52,7 +54,7 @@ body {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  font-family: 'Proxima-nova-l';
+  font-family: 'Proxima-nova-l', sans-serif;
 }
 
 .back-btn {
@@ -86,7 +88,7 @@ body {
   border: none;
 }
 
-/* Slide menu*/
+/* Slide menu */
 
 #slide-menu {
   position: absolute;
@@ -140,9 +142,12 @@ ul.nav-menu {
   padding-top: 40px;
 }
 
-li.menu-item  a {
-  font-size: 24px;
-  color: white;
+.category-item a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* Home */
@@ -156,9 +161,9 @@ li.menu-item  a {
 .header-container {
   height: 100px;
   width: 100%;
-  background: rgb(55,120,194);
+  background: rgb(55, 120, 194);
   display: flex;
-  background: linear-gradient(180deg, rgba(55,120,194,1) 0%, rgba(43,96,156,1) 100%);
+  background: linear-gradient(180deg, rgba(55, 120, 194, 1) 0%, rgba(43, 96, 156, 1) 100%);
   justify-content: center;
   align-items: center;
   color: white;
@@ -236,10 +241,14 @@ button.main-btn {
   width: 100%;
   cursor: pointer;
   height: 100%;
-  font-family: 'Proxima-nova-l';
+  font-family: 'Proxima-nova-l', sans-serif;
 }
 
-h5, h4, h3, h2, h1 {
+h5,
+h4,
+h3,
+h2,
+h1 {
   margin: 0;
 }
 
@@ -257,15 +266,7 @@ h5, h4, h3, h2, h1 {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 14px;
-  font-family: 'Proxima-nova-b';
-}
-
-.category-item a {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  font-family: 'Proxima-nova-b', sans-serif;
 }
 
 /* Sign in */
@@ -286,7 +287,7 @@ h5, h4, h3, h2, h1 {
   width: 100%;
   padding: 20px 10px;
   box-sizing: border-box;
-  background: linear-gradient(180deg, rgba(55,120,194,1) 0%, rgba(43,96,156,1) 100%);
+  background: linear-gradient(180deg, rgba(55, 120 194, 1) 0%, rgba(43, 96, 156, 1) 100%);
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -319,7 +320,7 @@ img.cat-img {
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  font-family: 'Proxima-nova-b';
+  font-family: 'Proxima-nova-b', sans-serif;
 }
 
 /* Proceeding */
@@ -418,7 +419,7 @@ img.app-logo {
 }
 
 .app-icon {
-  font-family: 'Proxima-nova-b';
+  font-family: 'Proxima-nova-b', sans-serif;
   margin-bottom: 34px;
   color: #2b609c;
 }
@@ -460,10 +461,15 @@ em.gray-font {
 }
 
 .black-font {
-  font-family: 'Proxima-nova-b';
+  font-family: 'Proxima-nova-b', sans-serif;
 }
 
 .gray-font {
-  font-family: 'Proxima-nova-l';
+  font-family: 'Proxima-nova-l', sans-serif;
   color: #989da3;
+}
+
+li.menu-item  a {
+  font-size: 24px;
+  color: white;
 }
