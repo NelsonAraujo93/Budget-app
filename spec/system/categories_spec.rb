@@ -33,7 +33,6 @@ RSpec.describe Category, type: :system do
     fill_in 'Password', with: user.password
     click_button 'Log in'
 
-    visit users_path
     expect(page).to have_content('Add Category')
   end
 
