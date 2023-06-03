@@ -1,5 +1,4 @@
 GEM
-  remote: https://rubygems.org/
   specs:
     actioncable (7.0.5)
       actionpack (= 7.0.5)
