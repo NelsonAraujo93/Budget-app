@@ -81,8 +81,9 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-database: budgetappdb_8083
+
+production:
+  <<: *default
+  database: budgetappdb_8083
   username: budgetuser
   password: 9ekDRmtJ3V1RfqywRsyfKciKYNwzf0J9
-  host: dpg-chtasmndvk4oliqqacs0-a
-  port: 5432
